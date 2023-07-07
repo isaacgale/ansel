@@ -609,7 +609,7 @@ endif(WIN32)
 if(NOT CUSTOM_CFLAGS)
   if(BUILD_SSE2_CODEPATHS)
     #we MUST always specify our required instruction set, native might not detect it
-    set(DT_REQ_INSTRUCTIONS "-msse2")
+    set(DT_REQ_INSTRUCTIONS "-msse2 -mavx2")
   endif()
 
   include(march-mtune)
@@ -625,7 +625,7 @@ if(NOT CUSTOM_CFLAGS)
   set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -Werror -Wuninitialized")
   if(CMAKE_COMPILER_IS_GNUCC)
     if(BUILD_SSE2_CODEPATHS)
-      set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfpmath=sse")
+      set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfpmath=sse -msse2avx")
     endif()
 
     set(CMAKE_C_FLAGS_DEBUG "${CMAKE_C_FLAGS_DEBUG} -O0 -g3 -ggdb3 -Wmaybe-uninitialized")
