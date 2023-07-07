@@ -500,7 +500,7 @@ static guint _import_set_file_list(const gchar *folder, const int folder_lgth,
           GtkTreeIter iter;
           gtk_list_store_append(d->from.store, &iter);
           gtk_list_store_set(d->from.store, &iter,
-                             DT_IMPORT_UI_EXISTS, already_imported ? "✔" : " ",
+                             DT_IMPORT_UI_EXISTS, already_imported ? "✓" : " ",
                              DT_IMPORT_UI_FILENAME, &uifullname[offset],
                              DT_IMPORT_FILENAME, &fullname[offset],
                              DT_IMPORT_UI_DATETIME, dt_txt,
@@ -1306,7 +1306,7 @@ static void _set_files_list(GtkWidget *rbox, dt_lib_module_t* self)
   gtk_container_add(GTK_CONTAINER(d->from.w), GTK_WIDGET(d->from.treeview));
 
   GtkCellRenderer *renderer = gtk_cell_renderer_text_new();
-  GtkTreeViewColumn *column = gtk_tree_view_column_new_with_attributes("✔", renderer, "text",
+  GtkTreeViewColumn *column = gtk_tree_view_column_new_with_attributes("✓", renderer, "text",
                                                     DT_IMPORT_UI_EXISTS, NULL);
   g_object_set(renderer, "xalign", 0.5, NULL);
   gtk_tree_view_append_column(d->from.treeview, column);

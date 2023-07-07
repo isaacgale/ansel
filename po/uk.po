@@ -26377,8 +26377,8 @@ msgstr "дії за допомогою миші"
 #~ msgid "_save..."
 #~ msgstr "_зберегти..."
 
-#~ msgid "✔"
-#~ msgstr "✔"
+#~ msgid "✓"
+#~ msgstr "✓"
 
 #~ msgid "do you want to access https://darktable.org/usermanual/?"
 #~ msgstr "хочете отримати доступ до https://darktable.org/usermanual/?"
