@@ -1336,7 +1336,7 @@ static void _iso_12646_quickbutton_clicked(GtkWidget *w, gpointer user_data)
 
   if(d->iso_12646.enabled)
   {
-    d->border_size = 0.125 * d->width;
+    d->border_size = 0.125 * MIN(d->width, d->height);
   }
   else
   {
